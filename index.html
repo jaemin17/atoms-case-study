@@ -168,6 +168,7 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .method-fig + .method-line{margin-top:24px}
 .method-line::before{content:""; position:absolute; left:2px; top:.7em; width:6px; height:6px; border-radius:50%; background:var(--accent)}
 .method-line b{color:var(--ink); font-weight:600}
+.mark{color:var(--ink); font-weight:600; text-decoration:underline; text-decoration-color:color-mix(in srgb,var(--accent) 45%,transparent); text-decoration-thickness:1.5px; text-underline-offset:4px}
 .figrow{display:grid; gap:16px; grid-template-columns:1fr}
 @media(min-width:640px){.figrow{grid-template-columns:1fr 1fr}}
 figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:11.5px; color:var(--muted); margin-top:9px; line-height:1.55}
@@ -284,7 +285,7 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
       <div class="mtwo">
         <div class="measure">
           <p class="method-line"><b>体验方法：</b>第一人称用户旅程研究。</p>
-          <p class="method-line"><b>用户身份：</b>对 vibe coding 感兴趣的免费新用户，目标是快速做出一个可发布的小产品 MVP。</p>
+          <p class="method-line"><b>用户身份：</b>对 vibe coding 感兴趣的<span class="mark">免费新用户</span>，目标是快速做出一个<span class="mark">可发布的小产品 MVP</span>。</p>
           <p class="method-line"><b>记录工具：</b>用录屏同步记录屏幕操作、语音思考与表情反应，保留点击、停顿、疑惑和信任变化。</p>
           <figure class="method-fig"><img src="assets/method-recording.png" alt="录屏与表情同步记录"><figcaption>录屏同步记录操作路径、语音思考与表情反应。</figcaption></figure>
           <p class="method-line"><b>路径范围：</b>官网 → 自然语言输入 → 注册进入编辑页 → 计划审核 → 多智能体执行 → 成果验收与发布 → 免费额度上限与升级决策。</p>
