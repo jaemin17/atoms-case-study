@@ -173,9 +173,6 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .path-flow{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
 .path-flow span{font-size:13.5px; color:var(--ink-2); line-height:1.5; padding:5px 9px; border:1px solid var(--border); border-radius:999px; background:var(--paper)}
 .path-flow i{font-style:normal; color:var(--muted); font-size:13px}
-.scope-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:18px; max-width:74ch}
-.scope-grid span{display:flex; align-items:center; gap:9px; min-height:44px; padding:9px 12px; border:1px solid var(--border); border-radius:8px; background:var(--panel); color:var(--ink-2); font-size:14px; line-height:1.45}
-.scope-grid span::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none}
 .insight-card{margin-top:24px; max-width:74ch; padding:18px 20px; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; background:var(--panel)}
 .insight-card h4{font-size:14px; color:var(--accent); margin-bottom:8px}
 .insight-card p{font-size:15px; line-height:1.75; color:var(--ink-2)}
@@ -190,7 +187,6 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .diag--funnel .diag-row{grid-template-columns:.72fr 1fr}
 .diag--funnel .diag-row>div:first-child{font-weight:600; color:var(--ink)}
 @media(max-width:720px){
-  .scope-grid{grid-template-columns:1fr}
   .diag-row{grid-template-columns:1fr}
   .diag--funnel .diag-row{grid-template-columns:1fr}
   .diag-row>div{border-left:none; border-top:1px solid var(--rule)}
@@ -342,15 +338,6 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
         <li>看从首页到 Start / Sign up 的路径是否顺畅。</li>
         <li>看产品推广是否能激发分享和口碑传播。</li>
       </ul></div>
-      <div class="blk"><div class="blk__l">走查范围</div><p>本页不评价生成后的编辑体验，只聚焦用户进入产品之前的关键判断点。</p></div>
-      <div class="scope-grid">
-        <span>首页首屏</span>
-        <span>CTA</span>
-        <span>产品价值说明</span>
-        <span>信任背书</span>
-        <span>Pricing / FAQ</span>
-        <span>注册前体验</span>
-      </div>
       <div class="blk"><div class="blk__l">用户路径与诊断表</div><p>注册前用户不是在完整理解产品，而是在连续做判断：先发现、再理解、再尝试，最后决定是否注册、付费和分享。</p></div>
       <div class="diag diag--funnel">
         <div class="diag-row diag-head"><div>阶段</div><div>Atoms 需要回答的问题</div></div>
