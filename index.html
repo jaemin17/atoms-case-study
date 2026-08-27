@@ -184,7 +184,7 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .diag-head{background:var(--panel); font-weight:600}
 .diag-head>div{color:var(--ink); font-size:12.5px}
 .diag b{color:var(--ink); font-weight:600}
-.diag--funnel .diag-row{grid-template-columns:.72fr 1fr}
+.diag--funnel .diag-row{grid-template-columns:.72fr 1fr 1fr 1.05fr}
 .diag--funnel .diag-row>div:first-child{font-weight:600; color:var(--ink)}
 @media(max-width:720px){
   .diag-row{grid-template-columns:1fr}
@@ -340,13 +340,13 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
       </ul></div>
       <div class="blk"><div class="blk__l">用户路径与诊断表</div><p>注册前用户不是在完整理解产品，而是在连续做判断：先发现、再理解、再尝试，最后决定是否注册、付费和分享。</p></div>
       <div class="diag diag--funnel">
-        <div class="diag-row diag-head"><div>阶段</div><div>Atoms 需要回答的问题</div></div>
-        <div class="diag-row"><div>发现</div><div>用户通过 Product Hunt、SEO、YouTube、GitHub、社群、对比页或 AI builder 关键词发现它时，是否能快速识别 Atoms 是什么？</div></div>
-        <div class="diag-row"><div>了解</div><div>首页是否能在 5 秒内讲清：Atoms 是什么、给谁用、解决什么问题，和 Lovable / Bolt / Replit / Cursor 有什么不同？</div></div>
-        <div class="diag-row"><div>尝试</div><div>Start / Try for free / Sign up 是否足够明显？用户是否知道点击后会发生什么，是否有低风险体验入口？</div></div>
-        <div class="diag-row"><div>产生兴趣</div><div>示例项目、AI agents、Stripe、SEO、Ads、GitHub export 等能力，是否能让目标用户觉得“这能帮我上线或获客”？</div></div>
-        <div class="diag-row"><div>转化</div><div>定价、credit 机制、信任背书、成功案例、FAQ 是否足够降低注册和付费顾虑？</div></div>
-        <div class="diag-row"><div>分享</div><div>是否有可分享的成果、模板、案例、社区、Affiliate、Explorer Program、Product Hunt / Discord / X 等传播机制？</div></div>
+        <div class="diag-row diag-head"><div>阶段</div><div>当前表现</div><div>主要问题</div><div>优化建议</div></div>
+        <div class="diag-row"><div>发现</div><div>有 Product Hunt、GitHub、SEO 等入口。</div><div>渠道信息分散，用户不一定能快速形成统一认知。</div><div>强化 use case SEO 页，让不同入口都回到清晰的产品叙事。</div></div>
+        <div class="diag-row"><div>了解</div><div>首页强调 AI employees + sell。</div><div>差异化价值可能不够直观，用户难判断和 Lovable / Bolt / Replit / Cursor 的不同。</div><div>首屏加入对比或真实生成过程，直接说明“从想法到上线和获客”。</div></div>
+        <div class="diag-row"><div>尝试</div><div>有 Start / Try for free / Sign up。</div><div>试用成本不清楚，用户不知道点击后会发生什么。</div><div>CTA 旁说明免费额度、无需信用卡、注册后保留当前输入。</div></div>
+        <div class="diag-row"><div>产生兴趣</div><div>展示 AI agents、Stripe、SEO、Ads、GitHub export 等能力。</div><div>能力点丰富，但容易变成清单，用户不一定能联想到自己的目标。</div><div>用场景串联能力：做出产品 → 发布上线 → 获取流量 → 继续迭代。</div></div>
+        <div class="diag-row"><div>转化</div><div>有定价、credit 机制、FAQ 和基础信任信息。</div><div>套餐差异和积分价值需要用户自己换算，付费理由不够直接。</div><div>把 credit 翻译成任务额度，并补充成功案例、成果链接和升级后收益。</div></div>
+        <div class="diag-row"><div>分享</div><div>可能有社区、案例、Product Hunt / Discord / X 等传播触点。</div><div>用户完成体验后，缺少明确的分享动机和可分享素材。</div><div>提供可分享成果页、模板案例、邀请奖励或 Explorer Program 入口。</div></div>
       </div>
     </section>
 
