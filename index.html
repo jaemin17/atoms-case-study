@@ -131,7 +131,7 @@ p+p,.p+.p{margin-top:15px}
 .d-info{background:var(--info)} .d-process{background:var(--process)} .d-trust{background:var(--trust)} .d-control{background:var(--control)}
 
 /* method */
-.mtwo{display:grid; grid-template-columns:1fr; gap:22px; margin-top:6px}
+.mtwo{display:grid; grid-template-columns:1fr; gap:26px; margin-top:4px}
 @media(min-width:680px){.mtwo{gap:26px}}
 .judge{background:var(--panel); border-radius:10px; padding:22px 24px; align-self:start}
 .judge h4{font-size:15px; margin-bottom:12px; display:flex; align-items:center; gap:8px}
@@ -160,9 +160,11 @@ p+p,.p+.p{margin-top:15px}
 
 figure{margin:22px 0 0}
 figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; background:var(--panel)}
-.method-fig{margin-top:14px; max-width:78%}
+.method-fig{margin-top:10px; max-width:78%}
 .method-fig img{box-shadow:0 10px 28px rgba(15,23,42,.08)}
-.method-line{font-size:15px; color:var(--ink-2); line-height:1.78; margin-top:16px; padding-left:18px; position:relative; max-width:74ch}
+.method-line{font-size:15px; color:var(--ink-2); line-height:1.78; margin-top:11px; padding-left:18px; position:relative; max-width:74ch}
+.measure .method-line:first-child{margin-top:0}
+.method-fig + .method-line{margin-top:20px}
 .method-line::before{content:""; position:absolute; left:2px; top:.7em; width:6px; height:6px; border-radius:50%; background:var(--accent)}
 .method-line b{color:var(--ink); font-weight:600}
 .figrow{display:grid; gap:16px; grid-template-columns:1fr}
