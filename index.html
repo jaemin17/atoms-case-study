@@ -138,11 +138,10 @@ p+p,.p+.p{margin-top:15px}
 .judge h4{font-size:15px; margin-bottom:12px; display:flex; align-items:center; gap:8px}
 .judge h4::before{content:""; width:8px; height:8px; border-radius:2px; background:var(--accent)}
 .judge p{font-size:14.5px; color:var(--ink-2)}
-.judge ul{margin:0 0 16px; padding:0; list-style:none}
-.judge li{font-size:14.5px; color:var(--ink-2); line-height:1.65; padding-left:16px; position:relative; margin-top:9px}
-.judge li::before{content:""; position:absolute; left:0; top:.72em; width:5px; height:5px; border-radius:50%; background:var(--accent)}
+.judge ul{margin:0 0 16px; padding:0; list-style:none; counter-reset:judge}
+.judge li{font-size:14.5px; color:var(--ink-2); line-height:1.65; padding-left:32px; position:relative; margin-top:10px}
+.judge li::before{counter-increment:judge; content:counter(judge); position:absolute; left:0; top:.15em; width:20px; height:20px; border-radius:50%; background:color-mix(in srgb,var(--accent) 12%,transparent); color:var(--accent); font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:11px; font-weight:700; line-height:20px; text-align:center}
 .judge .hl{color:var(--ink); font-weight:500}
-@media(min-width:680px){.judge ul{display:grid; grid-template-columns:1fr 1fr; column-gap:24px}}
 
 /* case */
 .case__id{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:12.5px; font-weight:600; color:var(--accent); letter-spacing:.06em; display:flex; align-items:center; gap:10px}
