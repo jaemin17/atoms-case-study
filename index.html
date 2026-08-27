@@ -179,6 +179,25 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .insight-card{margin-top:24px; max-width:74ch; padding:18px 20px; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; background:var(--panel)}
 .insight-card h4{font-size:14px; color:var(--accent); margin-bottom:8px}
 .insight-card p{font-size:15px; line-height:1.75; color:var(--ink-2)}
+.path-steps{display:grid; gap:10px; margin-top:18px; max-width:74ch}
+.path-step{display:grid; grid-template-columns:42px 1fr; gap:14px; padding:14px 16px; border:1px solid var(--border); border-radius:8px; background:var(--paper)}
+.path-step b{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; color:var(--accent); font-size:15px; line-height:1.4}
+.path-step h4{font-size:15px; margin-bottom:2px}
+.path-step p{font-size:13.5px; color:var(--ink-2); line-height:1.65}
+.diag{margin-top:18px; max-width:78ch; border:1px solid var(--border); border-radius:10px; overflow:hidden}
+.diag-row{display:grid; grid-template-columns:.85fr 1.15fr 1.35fr 1.35fr; border-top:1px solid var(--rule)}
+.diag-row:first-child{border-top:none}
+.diag-row>div{padding:12px 14px; border-left:1px solid var(--rule); font-size:13px; line-height:1.62; color:var(--ink-2)}
+.diag-row>div:first-child{border-left:none}
+.diag-head{background:var(--panel); font-weight:600}
+.diag-head>div{color:var(--ink); font-size:12.5px}
+.diag b{color:var(--ink); font-weight:600}
+@media(max-width:720px){
+  .scope-grid{grid-template-columns:1fr}
+  .diag-row{grid-template-columns:1fr}
+  .diag-row>div{border-left:none; border-top:1px solid var(--rule)}
+  .diag-row>div:first-child{border-top:none}
+}
 .figrow{display:grid; gap:16px; grid-template-columns:1fr}
 @media(min-width:640px){.figrow{grid-template-columns:1fr 1fr}}
 figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:11.5px; color:var(--muted); margin-top:9px; line-height:1.55}
@@ -331,6 +350,24 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
       <div class="insight-card">
         <h4>为什么值得先做</h4>
         <p>Atoms 的推广转化大概率首先卡在：用户是否迅速相信它<span class="mark">不仅能做 app，还能帮自己上线和获客</span>。如果首页没有把这件事讲清楚，后面的 Agent 能力再强，也很难让新用户放心开始。</p>
+      </div>
+      <div class="blk"><div class="blk__l">用户路径</div><p>注册前用户不是在完整理解产品，而是在快速判断：这是不是我的问题、它能不能做成、我现在点下去会不会有成本或风险。</p></div>
+      <div class="path-steps">
+        <div class="path-step"><b>01</b><div><h4>看到首屏</h4><p>先判断 Atoms 到底是代码工具、建站工具，还是能把想法带到上线和增长的产品。</p></div></div>
+        <div class="path-step"><b>02</b><div><h4>理解价值</h4><p>需要在第一屏附近看到清晰链路：从自然语言生成产品，到发布上线，再到 SEO、广告或获客。</p></div></div>
+        <div class="path-step"><b>03</b><div><h4>建立信任</h4><p>用户会寻找真实案例、生成结果、上线链接或团队能力证明，确认它不是只会做 demo。</p></div></div>
+        <div class="path-step"><b>04</b><div><h4>决定尝试</h4><p>CTA 需要告诉用户下一步会发生什么：能否免费开始、是否需要注册、输入内容会不会保留。</p></div></div>
+        <div class="path-step"><b>05</b><div><h4>确认成本</h4><p>Pricing 和 FAQ 要把套餐、额度、可完成任务范围讲清楚，降低开始前的不确定感。</p></div></div>
+      </div>
+      <div class="blk"><div class="blk__l">诊断表</div><p>首页转化的核心不是信息越多越好，而是每个模块都要回答一个关键疑问，并推动用户向下一步走。</p></div>
+      <div class="diag">
+        <div class="diag-row diag-head"><div>模块</div><div>用户要判断</div><div>当前风险</div><div>优化方向</div></div>
+        <div class="diag-row"><div><b>首页首屏</b></div><div>这是不是适合我的工具？</div><div>如果只强调 AI / Agent，用户可能不知道最终能得到什么。</div><div>用一句话讲清：从想法到上线和增长，不只是生成代码。</div></div>
+        <div class="diag-row"><div><b>CTA</b></div><div>点下去会发生什么？</div><div>“开始”如果缺少预期，用户会担心注册、成本或内容丢失。</div><div>明确免费开始、注册前可输入、注册后保留想法。</div></div>
+        <div class="diag-row"><div><b>产品价值说明</b></div><div>它解决的是哪段完整任务？</div><div>App 生成、上线、SEO、广告如果分散出现，价值链会断。</div><div>按用户目标组织：想法 → 产品 → 上线 → 获客。</div></div>
+        <div class="diag-row"><div><b>信任背书</b></div><div>我为什么相信它能做成？</div><div>缺少真实结果或前后对比时，用户难以判断能力边界。</div><div>展示可访问链接、生成过程摘要、典型用户案例。</div></div>
+        <div class="diag-row"><div><b>Pricing / FAQ</b></div><div>免费用户能试到哪一步？</div><div>积分、算力、套餐差异如果只用产品语言表达，用户难换算。</div><div>把额度翻译成任务：能生成几次、能否发布、升级后多得到什么。</div></div>
+        <div class="diag-row"><div><b>注册前体验</b></div><div>我现在输入安全吗？</div><div>如果没有说明输入是否保存，用户会犹豫要不要先认真描述需求。</div><div>在输入框旁说明：注册后继续当前想法，可先生成计划再决定。</div></div>
       </div>
     </section>
 
