@@ -173,6 +173,12 @@ figure img{border-radius:8px; border:1px solid var(--border-2); width:100%; back
 .path-flow{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
 .path-flow span{font-size:13.5px; color:var(--ink-2); line-height:1.5; padding:5px 9px; border:1px solid var(--border); border-radius:999px; background:var(--paper)}
 .path-flow i{font-style:normal; color:var(--muted); font-size:13px}
+.scope-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:18px; max-width:74ch}
+.scope-grid span{display:flex; align-items:center; gap:9px; min-height:44px; padding:9px 12px; border:1px solid var(--border); border-radius:8px; background:var(--panel); color:var(--ink-2); font-size:14px; line-height:1.45}
+.scope-grid span::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none}
+.insight-card{margin-top:24px; max-width:74ch; padding:18px 20px; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; background:var(--panel)}
+.insight-card h4{font-size:14px; color:var(--accent); margin-bottom:8px}
+.insight-card p{font-size:15px; line-height:1.75; color:var(--ink-2)}
 .figrow{display:grid; gap:16px; grid-template-columns:1fr}
 @media(min-width:640px){.figrow{grid-template-columns:1fr 1fr}}
 figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:11.5px; color:var(--muted); margin-top:9px; line-height:1.55}
@@ -252,7 +258,8 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
       <li><a data-go="cover"><span class="num">—</span>报告概览</a></li>
       <li><a data-go="method"><span class="num">00</span>体验方法</a></li>
       <li><a data-go="framework"><span class="num">01</span>评估标准</a></li>
-      <li><a data-go="case1"><span class="num">02</span>Atoms 体验 Case Study</a></li>
+      <li><a data-go="case0"><span class="num">02</span>Atoms 体验 Case Study</a></li>
+      <li class="sub"><a data-go="case0">00 首页转化走查</a></li>
       <li class="sub"><a data-go="case1">01 计划编辑心智错配</a></li>
       <li class="sub"><a data-go="case2">02 过程看不到进度</a></li>
       <li class="sub"><a data-go="case3">03 多智能体调不动</a></li>
@@ -304,6 +311,26 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
         <div class="crit__row"><div class="crit__name"><span class="dot d-process"></span><div><h4>过程呈现</h4><span class="en">Process</span></div></div><p>自主执行的「黑箱」，能否被看见、被追溯——且是用户能理解的进度，而非工程日志。</p></div>
         <div class="crit__row"><div class="crit__name"><span class="dot d-trust"></span><div><h4>信任建立</h4><span class="en">Trust</span></div></div><p>在结果不确定、AI 会犯错的前提下，用户敢不敢用、愿不愿意再用、愿不愿意付费。</p></div>
         <div class="crit__row"><div class="crit__name"><span class="dot d-control"></span><div><h4>控制感</h4><span class="en">Control</span></div></div><p>用户是否始终知道发生了什么、能在哪里介入、如何纠偏与恢复。</p></div>
+      </div>
+    </section>
+
+    <!-- CASE 0 -->
+    <section class="page" id="case0" data-title="首页转化走查">
+      <h3>首页转化走查</h3>
+      <div class="case__chips"><span class="chip chip--info">信息组织</span><span class="chip chip--trust">信任建立</span></div>
+      <p class="lead measure">这一页只看注册前的转化体验：用户是否能在短时间内理解 Atoms 能做什么，并相信它能帮自己完成上线和获客。</p>
+      <div class="blk"><div class="blk__l">走查范围</div><p>本页不评价生成后的编辑体验，只聚焦用户进入产品之前的关键判断点。</p></div>
+      <div class="scope-grid">
+        <span>首页首屏</span>
+        <span>CTA</span>
+        <span>产品价值说明</span>
+        <span>信任背书</span>
+        <span>Pricing / FAQ</span>
+        <span>注册前体验</span>
+      </div>
+      <div class="insight-card">
+        <h4>为什么值得先做</h4>
+        <p>Atoms 的推广转化大概率首先卡在：用户是否迅速相信它<span class="mark">不仅能做 app，还能帮自己上线和获客</span>。如果首页没有把这件事讲清楚，后面的 Agent 能力再强，也很难让新用户放心开始。</p>
       </div>
     </section>
 
@@ -495,7 +522,7 @@ figcaption{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:
     idx=i; pages[idx].classList.add('active');
     pcur.textContent=idx+1;
     prev.disabled=idx===0; next.disabled=idx===pages.length-1;
-    // outline active: map case1 also lights the parent "Case Study"
+    // outline active: the Case Study parent opens the conversion walkthrough.
     outlineLinks.forEach(function(a){a.classList.remove('active');});
     outlineLinks.forEach(function(a){ if(a.getAttribute('data-go')===ids[idx]) a.classList.add('active'); });
     window.scrollTo({top:0,behavior:'auto'});
