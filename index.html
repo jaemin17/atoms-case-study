@@ -132,7 +132,7 @@ p+p,.p+.p{margin-top:15px}
 
 /* method */
 .mtwo{display:grid; grid-template-columns:1fr; gap:22px; margin-top:6px}
-@media(min-width:680px){.mtwo{grid-template-columns:1.15fr .85fr; gap:34px}}
+@media(min-width:680px){.mtwo{gap:26px}}
 .judge{background:var(--panel); border-radius:10px; padding:22px 24px; align-self:start}
 .judge h4{font-size:15px; margin-bottom:12px; display:flex; align-items:center; gap:8px}
 .judge h4::before{content:""; width:8px; height:8px; border-radius:2px; background:var(--accent)}
@@ -141,6 +141,7 @@ p+p,.p+.p{margin-top:15px}
 .judge li{font-size:14.5px; color:var(--ink-2); line-height:1.65; padding-left:16px; position:relative; margin-top:9px}
 .judge li::before{content:""; position:absolute; left:0; top:.72em; width:5px; height:5px; border-radius:50%; background:var(--accent)}
 .judge .hl{color:var(--ink); font-weight:500}
+@media(min-width:680px){.judge ul{display:grid; grid-template-columns:1fr 1fr; column-gap:24px}}
 
 /* case */
 .case__id{font-family:"Manrope","Noto Sans SC",system-ui,sans-serif; font-size:12.5px; font-weight:600; color:var(--accent); letter-spacing:.06em; display:flex; align-items:center; gap:10px}
